@@ -11,29 +11,15 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         static void Main()
         {
-            //Local list of integers to hold the first five measurements of the text
-            List<int> parameters = new List<int>();
+            Input input = new Input();
+            input.FileTextInput("example.txt");
 
-            //Create 'Input' object
-            //Get either manually entered text, or text from a file
-
-
-            //Create an 'Analyse' object
-            //Pass the text input to the 'analyseText' method
-
-
-            //Receive a list of integers back
-
-
-            //Report the results of the analysis
-
-
-            //TO ADD: Get the frequency of individual letters?
-
-           
+            Analyse analyse = new Analyse();
+            Report.OutputConsole(analyse.AnalyseText(input.ToString()));
+            Report.OutputConsole(analyse.LetterFrequency(input.ToString()));
         }
-        
-        
-    
+
+
+
     }
 }

@@ -14,23 +14,45 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Arguments: string
         //Returns: list of integers
         //Calculates and returns an analysis of the text
-        public List<int> analyseText(string input)
+        public List<int> AnalyseText(string input)
         {
-            //List of integers to hold the first five measurements:
-            //1. Number of sentences
-            //2. Number of vowels
-            //3. Number of consonants
-            //4. Number of upper case letters
-            //5. Number of lower case letters
             List<int> values = new List<int>();
-            //Initialise all the values in the list to '0'
-            for(int i = 0; i<5; i++)
+
+            //List initialisation
+            for (int i = 0; i < 5; i++)
             {
                 values.Add(0);
             }
 
+            char[] endOfSentance = { '.', '!', '?' };
+
+            values[0] = input.Split(endOfSentance).Length - 1;
+
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+            values[1] = input.ToLower().Count(c => vowels.Contains(c));
+
+            values[2] = input.ToLower().Count(c => !vowels.Contains(c) && char.IsLetter(c));
+
+            values[3] = input.Count(c => c >= 65 && c <= 90 || c >= 192 && c <= 221);
+
+            values[4] = input.Count(c => c >= 97 && c <= 122 || c >= 223 && c <= 225);
+
 
             return values;
+        }
+
+        public Dictionary<char, int> LetterFrequency(string input)
+        {
+            Dictionary<char, int> result = new Dictionary<char, int>();
+
+            foreach (char letter in input)
+            {
+                if (!char.IsLetter(letter)) { continue; }
+                result[letter] = result.ContainsKey(letter) ? result[letter] + 1 : 1;
+            }
+
+            return result;
         }
     }
 }

@@ -1,0 +1,15 @@
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\bin\Debug\net6.0\OOPAssignment1.exe
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\bin\Debug\net6.0\OOPAssignment1.deps.json
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\bin\Debug\net6.0\OOPAssignment1.runtimeconfig.json
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\bin\Debug\net6.0\OOPAssignment1.dll
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\bin\Debug\net6.0\ref\OOPAssignment1.dll
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\bin\Debug\net6.0\OOPAssignment1.pdb
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\OOPAssignment1.csproj.AssemblyReference.cache
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\OOPAssignment1.GeneratedMSBuildEditorConfig.editorconfig
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\OOPAssignment1.AssemblyInfoInputs.cache
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\OOPAssignment1.AssemblyInfo.cs
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\OOPAssignment1.csproj.CoreCompileInputs.cache
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\OOPAssignment1.dll
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\ref\OOPAssignment1.dll
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\OOPAssignment1.pdb
+C:\VisualStudio Repositories\OOPAssignment1\OOPAssignment1\obj\Debug\net6.0\OOPAssignment1.genruntimeconfig.cache
