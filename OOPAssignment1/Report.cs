@@ -8,9 +8,10 @@ namespace CMP1903M_Assessment_1_Base_Code
 {
     static class Report
     {
-        //Handles the reporting of the analysis
-        //Maybe have different methods for different formats of output?
-        //eg.   public void outputConsole(List<int>)
+        /// <summary>
+        /// Handles the reporting of Analyse
+        /// </summary>
+        /// <param name="data">Text analysis data</param>
         public static void OutputConsole(List<int> data)
         {
             //Assuming that the input comes from Analyse.AnalyseText()
@@ -19,12 +20,13 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine($"Number of consonants: {data[2]}");
             Console.WriteLine($"Number of upper case characters: {data[3]}");
             Console.WriteLine($"Number of lower case characters: {data[4]}");
-
         }
 
-        //Handles the reporting of the analysis
-        //Maybe have different methods for different formats of output?
-        //eg.   public void outputConsole(List<int>)
+
+        /// <summary>
+        /// Handles the reporting of Analyse
+        /// </summary>
+        /// <param name="data">Letter frequency data</param>
         public static void OutputConsole(Dictionary<char, int> data)
         {
             foreach (var letterFrequency in data.OrderByDescending(x => x.Value))

@@ -11,10 +11,10 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Handles the text input for Assessment 1
         string text = "nothing";
 
-        //Method: manualTextInput
-        //Arguments: none
-        //Returns: string
-        //Gets text input from the keyboard
+        /// <summary>
+        /// Gets text input from the keyboard
+        /// </summary>
+        /// <returns>User-inputted string</returns>
         public string ManualTextInput()
         {
             Console.Write("Input: ");
@@ -22,10 +22,11 @@ namespace CMP1903M_Assessment_1_Base_Code
             return text;
         }
 
-        //Method: fileTextInput
-        //Arguments: string (the file path)
-        //Returns: string
-        //Gets text input from a .txt file
+        /// <summary>
+        /// Gets text input from a .txt file
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns>File-read string</returns>
         public string FileTextInput(string fileName)
         {
             if (!File.Exists(fileName))
