@@ -12,10 +12,11 @@ namespace CMP1903M_Assessment_1_Base_Code
         static void Main()
         {
             Input input = new Input();
-            input.FileTextInput("example.txt");
+            //input.FileTextInput("example.txt");
+            input.TextInputChoice();
 
             Analyse analyse = new Analyse();
-            Report.OutputConsole(analyse.AnalyseText(input.ToString()));
+            Report.OutputConsole(analyse.AnalyseText(input.ToString(), input.FromFile));
             Report.OutputConsole(analyse.LetterFrequency(input.ToString()));
         }
 

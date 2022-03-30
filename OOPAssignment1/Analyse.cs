@@ -13,7 +13,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         /// </summary>
         /// <param name="input"></param>
         /// <returns>List of integers corresponding to text analysis</returns>
-        public List<int> AnalyseText(string input)
+        public List<int> AnalyseText(string input, bool createFile)
         {
             List<int> values = new List<int>();
 
@@ -22,10 +22,9 @@ namespace CMP1903M_Assessment_1_Base_Code
             {
                 values.Add(0);
             }
+            char[] endOfSentence = { '.', '!', '?' }; //Characters which indicate the end of a sentance. Ellipsis will create problems.
 
-            char[] endOfSentance = { '.', '!', '?' }; //Characters which indicate the end of a sentance. Ellipsis will create problems.
-
-            values[0] = input.Split(endOfSentance).Length - 1; //Split text into sentances based on sentance ending punctuation.
+            values[0] = input.Split(endOfSentence).Length - 1; //Split text into sentances based on sentance ending punctuation.
 
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
 
@@ -37,10 +36,20 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             values[4] = input.Count(c => c >= 97 && c <= 122 || c >= 223 && c <= 225); //Counts the number of lower case characters using character codes.
 
+            if (createFile)
+            {
+                StreamWriter streamWriter = File.CreateText("LongWords.txt");
+                foreach (string word in new String(input.Where(x => !char.IsPunctuation(x)).ToArray()).Split(' ').Where(x => x.Length > 7))
+                {                
+                    streamWriter.WriteLine(word);
+                }
+                streamWriter.Close();
+            }
+
             return values;
         }
 
-        public Dictionary<char, int> LetterFrequency(string input)
+        public Dictionary<char, int> LetterFrequency(string input) //Additional 
         {
             Dictionary<char, int> result = new Dictionary<char, int>();
 

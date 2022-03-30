@@ -10,6 +10,54 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         //Handles the text input for Assessment 1
         string text = "nothing";
+        public bool FromFile { get; private set; } //Encapsulation
+
+        public string TextInputChoice() //Additional | Data Abstraction
+        {
+            bool successfulInput = false;
+            while (!successfulInput)
+            {
+                successfulInput = true;
+                Console.WriteLine("Enter input mode: (M)anual, (F)ile");
+                string fullInput = Console.ReadLine() ?? ".";
+                char inputMode = fullInput.ToUpper()[0];
+
+                switch (inputMode)
+                {
+                    case 'M':
+                        FromFile = false;
+                        return ManualTextInput();
+                    case 'F':
+                        FromFile = true;
+                        return InputFileNameTextInput();
+                    default:
+                        successfulInput = false;
+                        break;
+                }
+            }
+            return "ERROR";
+        }
+
+        private string InputFileNameTextInput() 
+        {
+            bool successfulInput = false;
+            while (!successfulInput)
+            {
+                successfulInput = true;
+                Console.Write("Enter file path: ");
+                string filePath = Console.ReadLine() ?? "";
+                try
+                {
+                    return FileTextInput(filePath);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    successfulInput = false;
+                }
+            }
+            return "ERROR";
+        }
 
         /// <summary>
         /// Gets text input from the keyboard
@@ -37,7 +85,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             return text;
         }
 
-        public override string ToString()
+        public override string ToString() //Additional 
         {
             return text;
         }

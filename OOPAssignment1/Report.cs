@@ -20,6 +20,8 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine($"Number of consonants: {data[2]}");
             Console.WriteLine($"Number of upper case characters: {data[3]}");
             Console.WriteLine($"Number of lower case characters: {data[4]}");
+
+
         }
 
 
@@ -27,7 +29,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         /// Handles the reporting of Analyse
         /// </summary>
         /// <param name="data">Letter frequency data</param>
-        public static void OutputConsole(Dictionary<char, int> data)
+        public static void OutputConsole(Dictionary<char, int> data) //Additional 
         {
             foreach (var letterFrequency in data.OrderByDescending(x => x.Value))
             {
